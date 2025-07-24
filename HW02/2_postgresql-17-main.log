@@ -1,0 +1,517 @@
+2025-07-24 08:42:58.238 MSK [2153] LOG:  checkpoint starting: time
+2025-07-24 08:42:58.391 MSK [2153] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.109 s, sync=0.009 s, total=0.154 s; sync files=1, longest=0.009 s, average=0.009 s; distance=5 kB, estimate=17043 kB; lsn=0/3238EC0, redo lsn=0/3238E68
+2025-07-24 08:45:33.250 MSK [2201] postgres@otus_nevlanov1 LOG:  could not receive data from client: Connection timed out
+2025-07-24 09:34:46.605 MSK [2426] postgres@postgres LOG:  could not receive data from client: Connection timed out
+2025-07-24 09:34:46.609 MSK [2423] postgres@otus_nevlanov1 LOG:  could not receive data from client: Connection timed out
+2025-07-24 10:50:45.621 MSK [2425] postgres@test LOG:  could not receive data from client: Connection timed out
+2025-07-24 10:50:45.621 MSK [3025] postgres@otus_nevlanov1 LOG:  could not receive data from client: Connection timed out
+2025-07-24 10:50:45.662 MSK [2896] postgres@test LOG:  could not receive data from client: Connection timed out
+2025-07-24 10:55:07.764 MSK [5400] postgres@otus_nevlanov1 LOG:  could not receive data from client: Connection timed out
+2025-07-24 10:55:07.765 MSK [5405] postgres@postgres LOG:  could not receive data from client: Connection timed out
+2025-07-24 10:55:07.765 MSK [5404] postgres@otus_nevlanov1 LOG:  could not receive data from client: Connection timed out
+2025-07-24 12:17:11.900 MSK [6500] postgres@test ERROR:  unrecognized configuration parameter "vacuum"
+2025-07-24 12:17:11.900 MSK [6500] postgres@test STATEMENT:  show vacuum;
+2025-07-24 12:21:59.340 MSK [6787] postgres@postgres ERROR:  relation "pgbench_branches" does not exist at character 22
+2025-07-24 12:21:59.340 MSK [6787] postgres@postgres STATEMENT:  select count(*) from pgbench_branches
+2025-07-24 12:23:01.496 MSK [2153] LOG:  checkpoint starting: time
+2025-07-24 12:27:15.788 MSK [6820] postgres@postgres ERROR:  syntax error at or near "'vacuum%'" at character 73
+2025-07-24 12:27:15.788 MSK [6820] postgres@postgres STATEMENT:  SELECT name, setting, context, short_desc
+	FROM pg_settingsWHERE namelike'vacuum%';
+2025-07-24 12:27:23.750 MSK [6820] postgres@postgres ERROR:  type "namelike" does not exist at character 66
+2025-07-24 12:27:23.750 MSK [6820] postgres@postgres STATEMENT:  SELECT name, setting, context, short_desc
+	FROM pg_settings WHERE namelike'vacuum%';
+2025-07-24 12:27:31.092 MSK [2153] LOG:  checkpoint complete: wrote 4255 buffers (26.0%); 0 WAL file(s) added, 0 removed, 2 recycled; write=269.489 s, sync=0.024 s, total=269.599 s; sync files=77, longest=0.005 s, average=0.001 s; distance=38370 kB, estimate=38370 kB; lsn=0/6C60AD0, redo lsn=0/57B17A0
+2025-07-24 12:31:04.059 MSK [6820] postgres@postgres ERROR:  trailing junk after numeric literal at or near "15s" at character 38
+2025-07-24 12:31:04.059 MSK [6820] postgres@postgres STATEMENT:  ALTER SYSTEM SET autovacuum_naptime= 15s;
+2025-07-24 12:42:29.161 MSK [2152] LOG:  received fast shutdown request
+2025-07-24 12:42:29.168 MSK [2152] LOG:  aborting any active transactions
+2025-07-24 12:42:29.170 MSK [6948] postgres@otus_nevlanov1 FATAL:  terminating connection due to administrator command
+2025-07-24 12:42:29.172 MSK [5406] postgres@test FATAL:  terminating connection due to administrator command
+2025-07-24 12:42:29.176 MSK [2152] LOG:  background worker "logical replication launcher" (PID 2158) exited with exit code 1
+2025-07-24 12:42:29.186 MSK [2153] LOG:  shutting down
+2025-07-24 12:42:29.194 MSK [2153] LOG:  checkpoint starting: shutdown immediate
+2025-07-24 12:42:29.274 MSK [2153] LOG:  checkpoint complete: wrote 96 buffers (0.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.023 s, sync=0.016 s, total=0.089 s; sync files=9, longest=0.009 s, average=0.002 s; distance=21180 kB, estimate=36651 kB; lsn=0/6C60B80, redo lsn=0/6C60B80
+2025-07-24 12:42:29.290 MSK [2152] LOG:  database system is shut down
+2025-07-24 12:42:29.608 MSK [6975] LOG:  starting PostgreSQL 17.5 (Ubuntu 17.5-1.pgdg24.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-07-24 12:42:29.612 MSK [6975] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-07-24 12:42:29.612 MSK [6975] LOG:  listening on IPv6 address "::", port 5432
+2025-07-24 12:42:29.621 MSK [6975] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-07-24 12:42:29.644 MSK [6978] LOG:  database system was shut down at 2025-07-24 12:42:29 MSK
+2025-07-24 12:42:29.661 MSK [6975] LOG:  database system is ready to accept connections
+2025-07-24 12:42:45.525 MSK [6997] LOG:  automatic vacuum of table "test.public.pgbench_accounts": index scans: 1
+	pages: 0 removed, 1765 remain, 1765 scanned (100.00% of total)
+	tuples: 2233 removed, 100000 remain, 0 are dead but not yet removable
+	removable cutoff: 49041, which was 0 XIDs old when operation ended
+	new relfrozenxid: 842, which is 78 XIDs ahead of previous value
+	frozen: 1712 pages from table (97.00% of total) had 26108 tuples frozen
+	index scan needed: 1680 pages from table (95.18% of total) had 4169 dead item identifiers removed
+	index "pgbench_accounts_pkey": pages: 276 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 34.644 MB/s, avg write rate: 34.254 MB/s
+	buffer usage: 1797 hits, 3727 misses, 3685 dirtied
+	WAL usage: 5433 records, 2028 full page images, 15671607 bytes
+	system usage: CPU: user: 0.03 s, system: 0.08 s, elapsed: 0.84 s
+2025-07-24 12:46:18.909 MSK [7072] postgres@postgres LOG:  provided user name (postgres) and authenticated user name (nevlanov) do not match
+2025-07-24 12:46:18.910 MSK [7072] postgres@postgres FATAL:  Peer authentication failed for user "postgres"
+2025-07-24 12:46:18.910 MSK [7072] postgres@postgres DETAIL:  Connection matched file "/etc/postgresql/17/main/pg_hba.conf" line 118: "local   all             postgres                                peer"
+2025-07-24 12:47:29.743 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 12:47:45.695 MSK [7106] nevlanov@nevlanov FATAL:  role "nevlanov" does not exist
+2025-07-24 12:47:56.303 MSK [6976] LOG:  checkpoint complete: wrote 267 buffers (1.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=26.501 s, sync=0.018 s, total=26.561 s; sync files=10, longest=0.006 s, average=0.002 s; distance=15370 kB, estimate=15370 kB; lsn=0/7B63680, redo lsn=0/7B635F0
+2025-07-24 12:49:33.515 MSK [7170] LOG:  automatic vacuum of table "postgres.public.pgbench_branches": index scans: 1
+	pages: 0 removed, 6 remain, 6 scanned (100.00% of total)
+	tuples: 8 removed, 126 remain, 17 are dead but not yet removable
+	tuples missed: 108 dead from 1 pages not removed due to cleanup lock contention
+	removable cutoff: 51371, which was 25 XIDs old when operation ended
+	new relfrozenxid: 51242, which is 2225 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 6 pages from table (100.00% of total) had 10 dead item identifiers removed
+	index "pgbench_branches_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 63 hits, 0 misses, 0 dirtied
+	WAL usage: 16 records, 1 full page images, 9301 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:33.516 MSK [7170] LOG:  automatic analyze of table "postgres.public.pgbench_branches"
+	avg read rate: 7.812 MB/s, avg write rate: 7.812 MB/s
+	buffer usage: 157 hits, 1 misses, 1 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:33.519 MSK [7170] LOG:  automatic vacuum of table "postgres.public.pgbench_tellers": index scans: 0
+	pages: 0 removed, 8 remain, 8 scanned (100.00% of total)
+	tuples: 318 removed, 241 remain, 18 are dead but not yet removable
+	tuples missed: 213 dead from 2 pages not removed due to cleanup lock contention
+	removable cutoff: 51371, which was 27 XIDs old when operation ended
+	new relfrozenxid: 50577, which is 1560 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 68.531 MB/s
+	buffer usage: 39 hits, 0 misses, 1 dirtied
+	WAL usage: 5 records, 0 full page images, 1109 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:33.519 MSK [7170] LOG:  automatic analyze of table "postgres.public.pgbench_tellers"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:33.525 MSK [7170] LOG:  automatic vacuum of table "postgres.public.pgbench_history": index scans: 0
+	pages: 0 removed, 17 remain, 17 scanned (100.00% of total)
+	tuples: 0 removed, 2348 remain, 0 are dead but not yet removable
+	removable cutoff: 51371, which was 29 XIDs old when operation ended
+	new relfrozenxid: 49042, which is 1 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 72.338 MB/s
+	buffer usage: 43 hits, 0 misses, 4 dirtied
+	WAL usage: 10 records, 1 full page images, 8916 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:33.529 MSK [7170] LOG:  automatic analyze of table "postgres.public.pgbench_history"
+	avg read rate: 6.250 MB/s, avg write rate: 1.562 MB/s
+	buffer usage: 135 hits, 4 misses, 1 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:53.485 MSK [7174] LOG:  automatic vacuum of table "postgres.public.pgbench_branches": index scans: 1
+	pages: 0 removed, 6 remain, 6 scanned (100.00% of total)
+	tuples: 16 removed, 20 remain, 9 are dead but not yet removable
+	tuples missed: 10 dead from 2 pages not removed due to cleanup lock contention
+	removable cutoff: 55661, which was 1470 XIDs old when operation ended
+	new relfrozenxid: 52345, which is 1103 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 5 pages from table (83.33% of total) had 17 dead item identifiers removed
+	index "pgbench_branches_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 62 hits, 0 misses, 0 dirtied
+	WAL usage: 16 records, 0 full page images, 1285 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 4.96 s
+2025-07-24 12:49:53.491 MSK [7174] LOG:  automatic analyze of table "postgres.public.pgbench_branches"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 164 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:53.496 MSK [7174] LOG:  automatic vacuum of table "postgres.public.pgbench_tellers": index scans: 0
+	pages: 0 removed, 8 remain, 8 scanned (100.00% of total)
+	tuples: 189 removed, 235 remain, 13 are dead but not yet removable
+	tuples missed: 212 dead from 4 pages not removed due to cleanup lock contention
+	removable cutoff: 57112, which was 22 XIDs old when operation ended
+	new relfrozenxid: 56451, which is 5874 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 39 hits, 0 misses, 0 dirtied
+	WAL usage: 4 records, 1 full page images, 8983 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:53.496 MSK [7174] LOG:  automatic analyze of table "postgres.public.pgbench_tellers"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:53.503 MSK [7174] LOG:  automatic vacuum of table "postgres.public.pgbench_history": index scans: 0
+	pages: 0 removed, 57 remain, 57 scanned (100.00% of total)
+	tuples: 0 removed, 8080 remain, 0 are dead but not yet removable
+	removable cutoff: 57112, which was 24 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 124 hits, 0 misses, 0 dirtied
+	WAL usage: 41 records, 0 full page images, 2548 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:49:53.512 MSK [7174] LOG:  automatic analyze of table "postgres.public.pgbench_history"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 177 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:03.584 MSK [7178] LOG:  automatic analyze of table "postgres.public.pgbench_accounts"
+	avg read rate: 0.496 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 1857 hits, 4 misses, 0 dirtied
+	system usage: CPU: user: 0.04 s, system: 0.01 s, elapsed: 0.06 s
+2025-07-24 12:50:08.556 MSK [7178] LOG:  automatic vacuum of table "postgres.public.pgbench_branches": index scans: 1
+	pages: 0 removed, 8 remain, 8 scanned (100.00% of total)
+	tuples: 2 removed, 213 remain, 27 are dead but not yet removable
+	tuples missed: 185 dead from 1 pages not removed due to cleanup lock contention
+	removable cutoff: 60003, which was 1484 XIDs old when operation ended
+	new relfrozenxid: 59814, which is 7469 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 8 pages from table (100.00% of total) had 19 dead item identifiers removed
+	index "pgbench_branches_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 52 hits, 0 misses, 0 dirtied
+	WAL usage: 18 records, 0 full page images, 1230 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 4.96 s
+2025-07-24 12:50:08.559 MSK [7178] LOG:  automatic analyze of table "postgres.public.pgbench_branches"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 42 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:08.565 MSK [7178] LOG:  automatic vacuum of table "postgres.public.pgbench_tellers": index scans: 0
+	pages: 0 removed, 8 remain, 8 scanned (100.00% of total)
+	tuples: 337 removed, 207 remain, 10 are dead but not yet removable
+	tuples missed: 187 dead from 3 pages not removed due to cleanup lock contention
+	removable cutoff: 61471, which was 19 XIDs old when operation ended
+	new relfrozenxid: 60483, which is 4032 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 39 hits, 0 misses, 0 dirtied
+	WAL usage: 6 records, 0 full page images, 1206 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:08.566 MSK [7178] LOG:  automatic analyze of table "postgres.public.pgbench_tellers"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:08.572 MSK [7178] LOG:  automatic vacuum of table "postgres.public.pgbench_history": index scans: 0
+	pages: 0 removed, 81 remain, 32 scanned (39.51% of total)
+	tuples: 0 removed, 11685 remain, 0 are dead but not yet removable
+	removable cutoff: 61471, which was 21 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 74 hits, 0 misses, 0 dirtied
+	WAL usage: 25 records, 0 full page images, 1604 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:08.583 MSK [7178] LOG:  automatic analyze of table "postgres.public.pgbench_history"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 201 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2025-07-24 12:50:23.492 MSK [7184] LOG:  automatic vacuum of table "postgres.public.pgbench_branches": index scans: 1
+	pages: 0 removed, 8 remain, 8 scanned (100.00% of total)
+	tuples: 26 removed, 192 remain, 13 are dead but not yet removable
+	tuples missed: 178 dead from 2 pages not removed due to cleanup lock contention
+	removable cutoff: 64367, which was 1479 XIDs old when operation ended
+	new relfrozenxid: 60709, which is 895 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 8 pages from table (100.00% of total) had 18 dead item identifiers removed
+	index "pgbench_branches_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 69 hits, 0 misses, 0 dirtied
+	WAL usage: 21 records, 0 full page images, 1577 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 4.96 s
+2025-07-24 12:50:23.495 MSK [7184] LOG:  automatic analyze of table "postgres.public.pgbench_branches"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 166 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:23.500 MSK [7184] LOG:  automatic vacuum of table "postgres.public.pgbench_tellers": index scans: 0
+	pages: 0 removed, 8 remain, 8 scanned (100.00% of total)
+	tuples: 225 removed, 449 remain, 26 are dead but not yet removable
+	tuples missed: 413 dead from 5 pages not removed due to cleanup lock contention
+	removable cutoff: 65813, which was 35 XIDs old when operation ended
+	new relfrozenxid: 64376, which is 3893 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 39 hits, 0 misses, 0 dirtied
+	WAL usage: 3 records, 0 full page images, 803 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:23.500 MSK [7184] LOG:  automatic analyze of table "postgres.public.pgbench_tellers"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:23.507 MSK [7184] LOG:  automatic vacuum of table "postgres.public.pgbench_history": index scans: 0
+	pages: 0 removed, 113 remain, 40 scanned (35.40% of total)
+	tuples: 0 removed, 16527 remain, 0 are dead but not yet removable
+	removable cutoff: 65813, which was 37 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 90 hits, 0 misses, 0 dirtied
+	WAL usage: 32 records, 0 full page images, 2017 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:23.525 MSK [7184] LOG:  automatic analyze of table "postgres.public.pgbench_history"
+	avg read rate: 0.434 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 237 hits, 1 misses, 0 dirtied
+	system usage: CPU: user: 0.01 s, system: 0.00 s, elapsed: 0.01 s
+2025-07-24 12:50:33.531 MSK [7188] LOG:  automatic vacuum of table "postgres.public.pgbench_branches": index scans: 1
+	pages: 4 removed, 4 remain, 8 scanned (100.00% of total)
+	tuples: 157 removed, 1 remain, 0 are dead but not yet removable
+	removable cutoff: 66122, which was 1 XIDs old when operation ended
+	new relfrozenxid: 66117, which is 5408 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 5 pages from table (62.50% of total) had 10 dead item identifiers removed
+	index "pgbench_branches_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 75 hits, 0 misses, 0 dirtied
+	WAL usage: 19 records, 0 full page images, 1557 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:33.534 MSK [7188] LOG:  automatic analyze of table "postgres.public.pgbench_branches"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 156 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:33.537 MSK [7188] LOG:  automatic vacuum of table "postgres.public.pgbench_tellers": index scans: 0
+	pages: 0 removed, 8 remain, 8 scanned (100.00% of total)
+	tuples: 388 removed, 10 remain, 0 are dead but not yet removable
+	removable cutoff: 66124, which was 0 XIDs old when operation ended
+	new relfrozenxid: 66081, which is 1705 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 39 hits, 0 misses, 0 dirtied
+	WAL usage: 15 records, 0 full page images, 1850 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:50:33.537 MSK [7188] LOG:  automatic analyze of table "postgres.public.pgbench_tellers"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-07-24 12:52:29.306 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 12:55:51.717 MSK [6976] LOG:  checkpoint complete: wrote 2029 buffers (12.4%); 0 WAL file(s) added, 0 removed, 2 recycled; write=202.349 s, sync=0.016 s, total=202.412 s; sync files=21, longest=0.007 s, average=0.001 s; distance=22601 kB, estimate=22601 kB; lsn=0/9175BB8, redo lsn=0/9175B28
+2025-07-24 12:57:29.816 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 12:57:33.289 MSK [6976] LOG:  checkpoint complete: wrote 35 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.420 s, sync=0.025 s, total=3.473 s; sync files=29, longest=0.007 s, average=0.001 s; distance=111 kB, estimate=20352 kB; lsn=0/91918E8, redo lsn=0/9191890
+2025-07-24 12:57:34.650 MSK [7276] postgres@postgres ERROR:  syntax error at or near "select" at character 24
+2025-07-24 12:57:34.650 MSK [7276] postgres@postgres STATEMENT:  select * from testHW01
+	select * from testHW01;
+2025-07-24 13:00:51.273 MSK [7276] postgres@postgres ERROR:  syntax error at or near "ls" at character 1
+2025-07-24 13:00:51.273 MSK [7276] postgres@postgres STATEMENT:  ls
+	ls data
+	select * from testHW01;
+2025-07-24 13:02:29.389 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 13:02:30.334 MSK [6976] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.904 s, sync=0.010 s, total=0.945 s; sync files=8, longest=0.007 s, average=0.002 s; distance=8 kB, estimate=18317 kB; lsn=0/91939C0, redo lsn=0/9193968
+2025-07-24 13:04:18.827 MSK [7429] LOG:  automatic vacuum of table "postgres.public.testhw01": index scans: 0
+	pages: 0 removed, 4425 remain, 4425 scanned (100.00% of total)
+	tuples: 0 removed, 1000000 remain, 0 are dead but not yet removable
+	removable cutoff: 66127, which was 0 XIDs old when operation ended
+	new relfrozenxid: 66126, which is 1 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.347 MB/s
+	buffer usage: 8872 hits, 0 misses, 5 dirtied
+	WAL usage: 4426 records, 2 full page images, 273393 bytes
+	system usage: CPU: user: 0.02 s, system: 0.00 s, elapsed: 0.11 s
+2025-07-24 13:04:18.917 MSK [7429] LOG:  automatic analyze of table "postgres.public.testhw01"
+	avg read rate: 0.000 MB/s, avg write rate: 0.174 MB/s
+	buffer usage: 4600 hits, 0 misses, 2 dirtied
+	system usage: CPU: user: 0.03 s, system: 0.00 s, elapsed: 0.08 s
+2025-07-24 13:07:29.434 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 13:11:59.107 MSK [6976] LOG:  checkpoint complete: wrote 4434 buffers (27.1%); 0 WAL file(s) added, 0 removed, 4 recycled; write=269.596 s, sync=0.012 s, total=269.674 s; sync files=8, longest=0.006 s, average=0.002 s; distance=66069 kB, estimate=66069 kB; lsn=0/D218F30, redo lsn=0/D218EA0
+2025-07-24 13:17:04.174 MSK [7651] LOG:  automatic vacuum of table "postgres.public.testhw01": index scans: 0
+	pages: 0 removed, 9831 remain, 9831 scanned (100.00% of total)
+	tuples: 1000000 removed, 1000000 remain, 0 are dead but not yet removable
+	removable cutoff: 66129, which was 0 XIDs old when operation ended
+	new relfrozenxid: 66128, which is 2 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 0.083 MB/s
+	buffer usage: 19686 hits, 0 misses, 3 dirtied
+	WAL usage: 14257 records, 2 full page images, 2831297 bytes
+	system usage: CPU: user: 0.08 s, system: 0.00 s, elapsed: 0.28 s
+2025-07-24 13:17:04.320 MSK [7651] LOG:  automatic analyze of table "postgres.public.testhw01"
+	avg read rate: 0.000 MB/s, avg write rate: 0.054 MB/s
+	buffer usage: 10003 hits, 0 misses, 1 dirtied
+	system usage: CPU: user: 0.04 s, system: 0.00 s, elapsed: 0.14 s
+2025-07-24 13:17:29.220 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 13:17:34.529 MSK [7661] LOG:  automatic vacuum of table "postgres.public.testhw01": index scans: 0
+	pages: 0 removed, 10811 remain, 10811 scanned (100.00% of total)
+	tuples: 1000000 removed, 1000000 remain, 0 are dead but not yet removable
+	removable cutoff: 66131, which was 1 XIDs old when operation ended
+	new relfrozenxid: 66130, which is 2 XIDs ahead of previous value
+	frozen: 2 pages from table (0.02% of total) had 292 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.000 MB/s, avg write rate: 2.402 MB/s
+	buffer usage: 21646 hits, 0 misses, 194 dirtied
+	WAL usage: 16218 records, 5409 full page images, 1101363 bytes
+	system usage: CPU: user: 0.10 s, system: 0.00 s, elapsed: 0.63 s
+2025-07-24 13:17:34.742 MSK [7661] LOG:  automatic analyze of table "postgres.public.testhw01"
+	avg read rate: 0.000 MB/s, avg write rate: 0.037 MB/s
+	buffer usage: 11501 hits, 0 misses, 1 dirtied
+	system usage: CPU: user: 0.06 s, system: 0.00 s, elapsed: 0.21 s
+2025-07-24 13:17:51.211 MSK [7665] LOG:  automatic vacuum of table "postgres.public.testhw01": index scans: 0
+	pages: 0 removed, 20842 remain, 20842 scanned (100.00% of total)
+	tuples: 106 removed, 1856009 remain, 1000000 are dead but not yet removable
+	removable cutoff: 66134, which was 1 XIDs old when operation ended
+	new relfrozenxid: 66133, which is 3 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 20.695 MB/s, avg write rate: 34.222 MB/s
+	buffer usage: 36113 hits, 5598 misses, 9257 dirtied
+	WAL usage: 21619 records, 0 full page images, 5178581 bytes
+	system usage: CPU: user: 0.13 s, system: 0.08 s, elapsed: 2.11 s
+2025-07-24 13:17:51.752 MSK [7665] LOG:  automatic analyze of table "postgres.public.testhw01"
+	avg read rate: 81.389 MB/s, avg write rate: 0.014 MB/s
+	buffer usage: 16157 hits, 5636 misses, 1 dirtied
+	system usage: CPU: user: 0.07 s, system: 0.00 s, elapsed: 0.54 s
+2025-07-24 13:18:04.224 MSK [7671] LOG:  automatic vacuum of table "postgres.public.testhw01": index scans: 0
+	pages: 0 removed, 21621 remain, 10814 scanned (50.02% of total)
+	tuples: 692 removed, 1499838 remain, 0 are dead but not yet removable
+	removable cutoff: 66136, which was 0 XIDs old when operation ended
+	new relfrozenxid: 66134, which is 1 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 0.050 MB/s, avg write rate: 13.102 MB/s
+	buffer usage: 21653 hits, 2 misses, 526 dirtied
+	WAL usage: 16224 records, 0 full page images, 2909184 bytes
+	system usage: CPU: user: 0.04 s, system: 0.00 s, elapsed: 0.31 s
+2025-07-24 13:18:08.936 MSK [6976] LOG:  checkpoint complete: wrote 10816 buffers (66.0%); 0 WAL file(s) added, 7 removed, 12 recycled; write=39.477 s, sync=0.022 s, total=39.716 s; sync files=7, longest=0.009 s, average=0.004 s; distance=320328 kB, estimate=320328 kB; lsn=0/3E1F1580, redo lsn=0/20AEB008
+2025-07-24 15:07:32.075 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 15:08:24.753 MSK [6976] LOG:  checkpoint complete: wrote 7418 buffers (45.3%); 0 WAL file(s) added, 0 removed, 30 recycled; write=52.156 s, sync=0.224 s, total=52.679 s; sync files=6, longest=0.212 s, average=0.038 s; distance=482329 kB, estimate=482329 kB; lsn=0/5BD01E38, redo lsn=0/3E1F17D0
+2025-07-24 15:08:28.498 MSK [6976] LOG:  checkpoint starting: wal
+2025-07-24 15:10:43.195 MSK [6994] postgres@otus_nevlanov1 LOG:  could not receive data from client: Connection timed out
+2025-07-24 15:11:10.221 MSK [9547] LOG:  automatic vacuum of table "postgres.public.testhw01": index scans: 0
+	pages: 0 removed, 34354 remain, 34354 scanned (100.00% of total)
+	tuples: 1000155 removed, 1000000 remain, 0 are dead but not yet removable
+	removable cutoff: 66143, which was 0 XIDs old when operation ended
+	new relfrozenxid: 66141, which is 7 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	avg read rate: 30.734 MB/s, avg write rate: 36.063 MB/s
+	buffer usage: 50330 hits, 18410 misses, 21602 dirtied
+	WAL usage: 62342 records, 16211 full page images, 7907932 bytes
+	system usage: CPU: user: 0.29 s, system: 0.27 s, elapsed: 4.67 s
+2025-07-24 15:11:11.313 MSK [9547] LOG:  automatic analyze of table "postgres.public.testhw01"
+	avg read rate: 115.578 MB/s, avg write rate: 0.007 MB/s
+	buffer usage: 14018 hits, 16155 misses, 1 dirtied
+	system usage: CPU: user: 0.06 s, system: 0.03 s, elapsed: 1.09 s
+2025-07-24 15:12:54.264 MSK [7360] postgres@postgres LOG:  could not receive data from client: Connection timed out
+2025-07-24 15:12:58.309 MSK [6976] LOG:  checkpoint complete: wrote 6635 buffers (40.5%); 0 WAL file(s) added, 0 removed, 33 recycled; write=269.513 s, sync=0.008 s, total=269.812 s; sync files=4, longest=0.007 s, average=0.002 s; distance=542319 kB, estimate=542319 kB; lsn=0/719AF138, redo lsn=0/5F38D608
+2025-07-24 15:18:28.440 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 15:18:31.275 MSK [6976] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 21 recycled; write=2.615 s, sync=0.017 s, total=2.836 s; sync files=23, longest=0.009 s, average=0.001 s; distance=352479 kB, estimate=523335 kB; lsn=0/74BC52C8, redo lsn=0/74BC5238
+2025-07-24 15:58:28.853 MSK [6976] LOG:  checkpoint starting: time
+2025-07-24 15:58:32.130 MSK [6976] LOG:  checkpoint complete: wrote 33 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.229 s, sync=0.017 s, total=3.278 s; sync files=24, longest=0.008 s, average=0.001 s; distance=95 kB, estimate=471011 kB; lsn=0/74BDD0D8, redo lsn=0/74BDD080
+2025-07-24 16:01:40.134 MSK [6975] LOG:  received fast shutdown request
+2025-07-24 16:01:40.140 MSK [6975] LOG:  aborting any active transactions
+2025-07-24 16:01:40.144 MSK [7340] postgres@postgres FATAL:  terminating connection due to administrator command
+2025-07-24 16:01:40.148 MSK [6975] LOG:  background worker "logical replication launcher" (PID 6981) exited with exit code 1
+2025-07-24 16:01:40.158 MSK [6976] LOG:  shutting down
+2025-07-24 16:01:40.165 MSK [6976] LOG:  checkpoint starting: shutdown immediate
+2025-07-24 16:01:40.201 MSK [6976] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.043 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=423910 kB; lsn=0/74BDD188, redo lsn=0/74BDD188
+2025-07-24 16:01:40.246 MSK [6975] LOG:  database system is shut down
+2025-07-24 16:01:40.667 MSK [10410] LOG:  starting PostgreSQL 17.5 (Ubuntu 17.5-1.pgdg24.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-07-24 16:01:40.669 MSK [10410] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-07-24 16:01:40.670 MSK [10410] LOG:  listening on IPv6 address "::", port 5432
+2025-07-24 16:01:40.683 MSK [10410] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-07-24 16:01:40.710 MSK [10413] LOG:  database system was shut down at 2025-07-24 16:01:40 MSK
+2025-07-24 16:01:40.728 MSK [10410] LOG:  database system is ready to accept connections
+2025-07-24 16:06:40.791 MSK [10411] LOG:  checkpoint starting: time
+2025-07-24 16:06:40.949 MSK [10411] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.117 s, sync=0.012 s, total=0.159 s; sync files=3, longest=0.006 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/74BDD290, redo lsn=0/74BDD238
+2025-07-24 16:08:57.704 MSK [10560] postgres@otus_nevlanov1 ERROR:  syntax error at or near "select" at character 24
+2025-07-24 16:08:57.704 MSK [10560] postgres@otus_nevlanov1 STATEMENT:  select * from pg_locks
+	select * from pg_locks;
+2025-07-24 16:10:28.072 MSK [10448] postgres@otus_nevlanov1 ERROR:  column "id" does not exist at character 38
+2025-07-24 16:10:28.072 MSK [10448] postgres@otus_nevlanov1 HINT:  Perhaps you meant to reference the column "test2.i".
+2025-07-24 16:10:28.072 MSK [10448] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '0' WHERE id = 1;
+2025-07-24 16:10:42.034 MSK [10448] postgres@otus_nevlanov1 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-07-24 16:10:42.034 MSK [10448] postgres@otus_nevlanov1 STATEMENT:  BEGIN;
+2025-07-24 16:10:42.034 MSK [10448] postgres@otus_nevlanov1 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-07-24 16:10:42.034 MSK [10448] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '0' WHERE i = 1;
+2025-07-24 16:11:41.050 MSK [10411] LOG:  checkpoint starting: time
+2025-07-24 16:11:41.199 MSK [10411] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.108 s, sync=0.010 s, total=0.150 s; sync files=2, longest=0.006 s, average=0.005 s; distance=0 kB, estimate=0 kB; lsn=0/74BDD4C0, redo lsn=0/74BDD468
+2025-07-24 16:16:41.300 MSK [10411] LOG:  checkpoint starting: time
+2025-07-24 16:16:41.444 MSK [10411] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.010 s, total=0.145 s; sync files=1, longest=0.010 s, average=0.010 s; distance=0 kB, estimate=0 kB; lsn=0/74BDD6F0, redo lsn=0/74BDD698
+2025-07-24 16:20:47.511 MSK [10560] postgres@otus_nevlanov1 LOG:  process 10560 still waiting for ShareLock on transaction 66148 after 200.278 ms
+2025-07-24 16:20:47.511 MSK [10560] postgres@otus_nevlanov1 DETAIL:  Process holding the lock: 10448. Wait queue: 10560.
+2025-07-24 16:20:47.511 MSK [10560] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,3) in relation "test2"
+2025-07-24 16:20:47.511 MSK [10560] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '200' WHERE i = 1;
+2025-07-24 16:21:11.409 MSK [10560] postgres@otus_nevlanov1 LOG:  process 10560 acquired ShareLock on transaction 66148 after 24097.835 ms
+2025-07-24 16:21:11.409 MSK [10560] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,3) in relation "test2"
+2025-07-24 16:21:11.409 MSK [10560] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '200' WHERE i = 1;
+2025-07-24 16:21:41.545 MSK [10411] LOG:  checkpoint starting: time
+2025-07-24 16:21:41.695 MSK [10411] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.107 s, sync=0.014 s, total=0.151 s; sync files=2, longest=0.011 s, average=0.007 s; distance=0 kB, estimate=0 kB; lsn=0/74BDD9E8, redo lsn=0/74BDD990
+2025-07-24 16:28:32.306 MSK [10956] postgres@postgres WARNING:  PID 7360 is not a PostgreSQL backend process
+2025-07-24 16:34:45.626 MSK [11057] postgres@otus_nevlanov1 ERROR:  syntax error at or near "show" at character 15
+2025-07-24 16:34:45.626 MSK [11057] postgres@otus_nevlanov1 STATEMENT:  show pg_locks
+	show pg_locks;
+2025-07-24 16:36:59.613 MSK [11057] postgres@otus_nevlanov1 WARNING:  there is no transaction in progress
+2025-07-24 16:53:11.741 MSK [10410] LOG:  received fast shutdown request
+2025-07-24 16:53:11.753 MSK [10410] LOG:  aborting any active transactions
+2025-07-24 16:53:11.753 MSK [11158] postgres@otus_nevlanov1 FATAL:  terminating connection due to administrator command
+2025-07-24 16:53:11.754 MSK [10448] postgres@otus_nevlanov1 FATAL:  terminating connection due to administrator command
+2025-07-24 16:53:11.754 MSK [11057] postgres@otus_nevlanov1 FATAL:  terminating connection due to administrator command
+2025-07-24 16:53:11.754 MSK [10444] postgres@postgres FATAL:  terminating connection due to administrator command
+2025-07-24 16:53:11.754 MSK [10953] postgres@otus_nevlanov1 FATAL:  terminating connection due to administrator command
+2025-07-24 16:53:11.762 MSK [10410] LOG:  background worker "logical replication launcher" (PID 10416) exited with exit code 1
+2025-07-24 16:53:11.765 MSK [10411] LOG:  shutting down
+2025-07-24 16:53:11.771 MSK [10411] LOG:  checkpoint starting: shutdown immediate
+2025-07-24 16:53:11.817 MSK [10411] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.007 s, total=0.053 s; sync files=1, longest=0.007 s, average=0.007 s; distance=0 kB, estimate=0 kB; lsn=0/74BDDA98, redo lsn=0/74BDDA98
+2025-07-24 16:53:11.827 MSK [10410] LOG:  database system is shut down
+2025-07-24 16:53:12.101 MSK [11447] LOG:  starting PostgreSQL 17.5 (Ubuntu 17.5-1.pgdg24.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-07-24 16:53:12.104 MSK [11447] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-07-24 16:53:12.104 MSK [11447] LOG:  listening on IPv6 address "::", port 5432
+2025-07-24 16:53:12.113 MSK [11447] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-07-24 16:53:12.139 MSK [11450] LOG:  database system was shut down at 2025-07-24 16:53:11 MSK
+2025-07-24 16:53:12.156 MSK [11447] LOG:  database system is ready to accept connections
+2025-07-24 16:58:12.238 MSK [11448] LOG:  checkpoint starting: time
+2025-07-24 16:58:12.304 MSK [11448] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.016 s, sync=0.008 s, total=0.067 s; sync files=2, longest=0.005 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/74BDDBA0, redo lsn=0/74BDDB48
+2025-07-24 17:53:13.306 MSK [11448] LOG:  checkpoint starting: time
+2025-07-24 17:53:13.452 MSK [11448] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.016 s, total=0.146 s; sync files=1, longest=0.016 s, average=0.016 s; distance=0 kB, estimate=0 kB; lsn=0/74BDDE18, redo lsn=0/74BDDDC0
+2025-07-24 17:53:13.689 MSK [11523] postgres@otus_nevlanov1 LOG:  process 11523 still waiting for ShareLock on transaction 66150 after 200.440 ms
+2025-07-24 17:53:13.689 MSK [11523] postgres@otus_nevlanov1 DETAIL:  Process holding the lock: 11539. Wait queue: 11523.
+2025-07-24 17:53:13.689 MSK [11523] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,5) in relation "test2"
+2025-07-24 17:53:13.689 MSK [11523] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '1000' WHERE i = 1;
+2025-07-24 17:53:26.351 MSK [11611] postgres@otus_nevlanov1 LOG:  process 11611 still waiting for ExclusiveLock on tuple (0,5) of relation 24641 of database 16388 after 200.254 ms
+2025-07-24 17:53:26.351 MSK [11611] postgres@otus_nevlanov1 DETAIL:  Process holding the lock: 11523. Wait queue: 11611.
+2025-07-24 17:53:26.351 MSK [11611] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '2000' WHERE i = 1;
+2025-07-24 17:53:45.960 MSK [11523] postgres@otus_nevlanov1 LOG:  process 11523 acquired ShareLock on transaction 66150 after 32471.601 ms
+2025-07-24 17:53:45.960 MSK [11523] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,5) in relation "test2"
+2025-07-24 17:53:45.960 MSK [11523] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '1000' WHERE i = 1;
+2025-07-24 17:53:45.960 MSK [11611] postgres@otus_nevlanov1 LOG:  process 11611 acquired ExclusiveLock on tuple (0,5) of relation 24641 of database 16388 after 19809.392 ms
+2025-07-24 17:53:45.960 MSK [11611] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '2000' WHERE i = 1;
+2025-07-24 17:53:46.160 MSK [11611] postgres@otus_nevlanov1 LOG:  process 11611 still waiting for ShareLock on transaction 66151 after 200.200 ms
+2025-07-24 17:53:46.160 MSK [11611] postgres@otus_nevlanov1 DETAIL:  Process holding the lock: 11523. Wait queue: 11611.
+2025-07-24 17:53:46.160 MSK [11611] postgres@otus_nevlanov1 CONTEXT:  while locking tuple (0,6) in relation "test2"
+2025-07-24 17:53:46.160 MSK [11611] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '2000' WHERE i = 1;
+2025-07-24 17:53:55.188 MSK [11611] postgres@otus_nevlanov1 LOG:  process 11611 acquired ShareLock on transaction 66151 after 9227.852 ms
+2025-07-24 17:53:55.188 MSK [11611] postgres@otus_nevlanov1 CONTEXT:  while locking tuple (0,6) in relation "test2"
+2025-07-24 17:53:55.188 MSK [11611] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '2000' WHERE i = 1;
+2025-07-24 17:58:13.502 MSK [11448] LOG:  checkpoint starting: time
+2025-07-24 17:58:14.057 MSK [11448] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.509 s, sync=0.011 s, total=0.556 s; sync files=5, longest=0.007 s, average=0.003 s; distance=11 kB, estimate=11 kB; lsn=0/74BE0AE0, redo lsn=0/74BE0A88
+2025-07-24 18:03:13.157 MSK [11448] LOG:  checkpoint starting: time
+2025-07-24 18:03:19.111 MSK [11448] LOG:  checkpoint complete: wrote 59 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.843 s, sync=0.056 s, total=5.954 s; sync files=17, longest=0.011 s, average=0.004 s; distance=339 kB, estimate=339 kB; lsn=0/74C35A40, redo lsn=0/74C359B0
+2025-07-24 18:26:06.469 MSK [12861] postgres@otus_nevlanov1 ERROR:  column "id" does not exist at character 38
+2025-07-24 18:26:06.469 MSK [12861] postgres@otus_nevlanov1 HINT:  Perhaps you meant to reference the column "test2.i".
+2025-07-24 18:26:06.469 MSK [12861] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '0' WHERE id = 1;
+2025-07-24 18:27:37.359 MSK [12861] postgres@otus_nevlanov1 LOG:  process 12861 still waiting for ShareLock on transaction 66156 after 200.247 ms
+2025-07-24 18:27:37.359 MSK [12861] postgres@otus_nevlanov1 DETAIL:  Process holding the lock: 13172. Wait queue: 12861.
+2025-07-24 18:27:37.359 MSK [12861] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,2) in relation "test2"
+2025-07-24 18:27:37.359 MSK [12861] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '0' WHERE i = 2;
+2025-07-24 18:27:44.576 MSK [13172] postgres@otus_nevlanov1 LOG:  process 13172 still waiting for ShareLock on transaction 66157 after 200.224 ms
+2025-07-24 18:27:44.576 MSK [13172] postgres@otus_nevlanov1 DETAIL:  Process holding the lock: 11611. Wait queue: 13172.
+2025-07-24 18:27:44.576 MSK [13172] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,9) in relation "test2"
+2025-07-24 18:27:44.576 MSK [13172] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '1000' WHERE i = 3;
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 LOG:  process 11611 detected deadlock while waiting for ShareLock on transaction 66155 after 200.565 ms
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 DETAIL:  Process holding the lock: 12861. Wait queue: .
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,8) in relation "test2"
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '2000' WHERE i = 1;
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 ERROR:  deadlock detected
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 DETAIL:  Process 11611 waits for ShareLock on transaction 66155; blocked by process 12861.
+	Process 12861 waits for ShareLock on transaction 66156; blocked by process 13172.
+	Process 13172 waits for ShareLock on transaction 66157; blocked by process 11611.
+	Process 11611: UPDATE  test2 SET amount = '2000' WHERE i = 1;
+	Process 12861: UPDATE  test2 SET amount = '0' WHERE i = 2;
+	Process 13172: UPDATE  test2 SET amount = '1000' WHERE i = 3;
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 HINT:  See server log for query details.
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,8) in relation "test2"
+2025-07-24 18:27:51.247 MSK [11611] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '2000' WHERE i = 1;
+2025-07-24 18:27:51.248 MSK [13172] postgres@otus_nevlanov1 LOG:  process 13172 acquired ShareLock on transaction 66157 after 6871.801 ms
+2025-07-24 18:27:51.248 MSK [13172] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,9) in relation "test2"
+2025-07-24 18:27:51.248 MSK [13172] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '1000' WHERE i = 3;
+2025-07-24 18:28:13.532 MSK [11448] LOG:  checkpoint starting: time
+2025-07-24 18:28:13.681 MSK [11448] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.108 s, sync=0.011 s, total=0.149 s; sync files=2, longest=0.007 s, average=0.006 s; distance=1 kB, estimate=305 kB; lsn=0/74C35F88, redo lsn=0/74C35F28
+2025-07-24 18:28:39.062 MSK [12861] postgres@otus_nevlanov1 LOG:  process 12861 acquired ShareLock on transaction 66156 after 61903.723 ms
+2025-07-24 18:28:39.062 MSK [12861] postgres@otus_nevlanov1 CONTEXT:  while updating tuple (0,2) in relation "test2"
+2025-07-24 18:28:39.062 MSK [12861] postgres@otus_nevlanov1 STATEMENT:  UPDATE  test2 SET amount = '0' WHERE i = 2;

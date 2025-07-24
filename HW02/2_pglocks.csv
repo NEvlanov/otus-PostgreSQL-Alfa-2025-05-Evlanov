@@ -1,0 +1,3 @@
+"locktype","database","relation","page","tuple","virtualxid","transactionid","classid","objid","objsubid","virtualtransaction","pid","mode","granted","fastpath","waitstart"
+"relation",16388,12073,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"13/7",12656,"AccessShareLock",True,True,NULL
+"virtualxid",NULL,NULL,NULL,NULL,"13/7",NULL,NULL,NULL,NULL,"13/7",12656,"ExclusiveLock",True,True,NULL
